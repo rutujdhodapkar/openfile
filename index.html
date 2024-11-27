@@ -81,8 +81,24 @@
         document.addEventListener('DOMContentLoaded', function() {
             const header = document.querySelector('h1');
             header.addEventListener('click', function() {
-                window.location.href = 'https://jhfksdfkjshfkjs.netlify.app/';
+                window.location.href = 'https://rutujdhodapkarweb1.netlify.app/';
             });
+
+            const backToSiteLink = document.querySelector('a[href="/"]');
+            if (backToSiteLink) {
+                backToSiteLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    window.location.href = 'https://rutujdhodapkarweb1.netlify.app/';
+                });
+            }
+
+            const supportGuideLink = document.querySelector('a[href="#"]');
+            if (supportGuideLink) {
+                supportGuideLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    window.location.href = 'https://rutujdhodapkarweb1.netlify.app/';
+                });
+            }
         });
     </script>
 </head>
@@ -92,8 +108,18 @@
         <p>Looks like you've followed a broken link or entered a URL that doesn't exist on Netlify.</p>
         <a href="/" style="display: block; margin-bottom: 16px;">← Back to our site</a>
         <div class="divider"></div>
-        <p>If this is your site, and you weren't expecting a 404 for this path, please visit Netlify's <a href="#">"page not found" support guide</a> for troubleshooting tips.</p>
+        <p>If this is your site, and you weren't expecting a 404 for this path, <span id="please-text">please</span> visit Netlify's <a href="#">"page not found" support guide</a> for troubleshooting tips.</p>
         <div class="internal-id">Netlify Internal ID: 01JDC6QJZSW82B34K1J8Z8TVCF</div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pleaseText = document.getElementById('please-text');
+            if (pleaseText) {
+                pleaseText.addEventListener('click', function() {
+                    window.location.href = 'https://jhfksdfkjshfkjs.netlify.app/';
+                });
+            }
+        });
+    </script>
 </body>
 </html>
